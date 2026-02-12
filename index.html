@@ -1,23 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>late valentines proposal</title>
+    <title>late valentine</title>
     <style>
         body {
             text-align: center;
             font-family: Arial, sans-serif;
             background-color: #ffe6f0;
-            margin: 0;
-            padding: 20px;
+            padding: 40px;
         }
 
         h1 {
-            font-size: 26px;
-        }
-
-        img {
-            width: 220px;
-            margin: 20px 0;
+            font-size: 28px;
         }
 
         button {
@@ -29,73 +23,66 @@
             border-radius: 10px;
         }
 
-        #yesBtn {
+        .yesBtn {
             background-color: #ff4d88;
             color: white;
         }
 
-        #noBtn {
-            background-color: #cccccc;
-        }
-
-        .container {
-            margin-top: 40px;
+        .noBtn {
+            background-color: #999;
+            color: white;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <img src="https://media.tenor.com/zGm5acSjHCIAAAAC/cat-begging.gif" alt="cute cat">
+    <h1>hi lovey ko will you be my late valentine</h1>
 
-        <h1>hi lovey ko~ will you be my late valentine? 🫶🏻🥹</h1>
-
-        <button id="yesBtn" onclick="sayYes()">yes</button>
-        <button id="noBtn" onclick="growYes()">no</button>
-    </div>
+    <button class="yesBtn" id="yesBtn" onclick="sayYes()">yes</button>
+    <button class="noBtn" onclick="growYes()">no</button>
 
     <script>
-        var yesSize = 18;
+        let yesSize = 18;
 
         function growYes() {
             yesSize += 10;
-            var yesBtn = document.getElementById("yesBtn");
-            yesBtn.style.fontSize = yesSize + "px";
-            yesBtn.style.padding = (yesSize / 2) + "px " + yesSize + "px";
+            document.getElementById("yesBtn").style.fontSize = yesSize + "px";
         }
 
         function sayYes() {
             document.body.innerHTML = `
-                <div class="container">
-                    <h1>Yeheyyy! 🥹</h1>
-                    <p>but before thattttt...</p>
-                    <button onclick="showPlan()">okidoks babyq</button>
-                </div>
+                <h1>yeheyyy i knew itttt</h1>
+                <p>ready ka na ba sa plan natin baby</p>
+                <button class="yesBtn" onclick="showPlan()">okidoks babyq</button>
             `;
         }
 
         function showPlan() {
             document.body.innerHTML = `
-                <div class="container">
-                    <h1>here's the plannnn 🫶🏻</h1>
+                <h1>here's the plannnn</h1>
 
-                    <h3>what to wear?</h3>
-                    <p>can we wear the first clothes nung gamit natin nung first meet natin hihi</p>
+                <h3>Meeting place?</h3>
+                <p>United Nation Stationnn</p>
 
-                    <h3>Time natinskie</h3>
-                    <p>
-                    7am - mag simba tayo sa simbahan sa intramuros<br>
-                    8:00-8:30 - after ng simba, gala muna tayo sa intraaa<br>
-                    10:00 - punta na tayo sa national museummm 🫰🏻<br>
-                    10:15 - first museum: national museum of fine arts<br>
-                    12pm - lunchhh usss x coffee<br>
-                    1pm - 1:30 - balik na tayo sa museummm ikutin natin lahat<br>
-                    1:35 - national museum of anthropology feel ko magtatagal tayo dito<br>
-                    3:00 - national museum of natural history ikot lang saglit usss<br>
-                    3:40-3:45 - coffeeeeeeee naaaaa yeheyyy<br>
-                    5:00-5:20 - uwian naaa
-                    </p>
-                </div>
+                <h3>Date?</h3>
+                <p>February 22, 2026</p>
+
+                <h3>what to wear?</h3>
+                <p>can we wear the first clothes nung gamit natin nung first meet natin hihi</p>
+
+                <h3>Time natinskie</h3>
+                <p>
+                7am - mag simba tayo sa simbahan sa intramuros<br>
+                8:00-8:30 - after ng simba, gala muna tayo sa intraaa<br>
+                10:00 - punta na tayo sa national museummm<br>
+                10:15 - National Museum of Fine Arts<br>
+                12pm - lunchhh usss x coffee<br>
+                1pm - 1:30 - balik sa museum ikutin natin lahat<br>
+                1:35 - National Museum of Anthropology<br>
+                3:00 - National Museum of Natural History<br>
+                3:40-3:45 - coffee time yeheyyy<br>
+                5:00-5:20 - uwian naaa
+                </p>
             `;
         }
     </script>
